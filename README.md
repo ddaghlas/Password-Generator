@@ -1,4 +1,4 @@
-# Password-Generator
+# Description
 I was tasked with creating a password generator that enables employees to generate random passwords based on criteria that they've selected. The app is run in the browser that features dynamically updated HTML and CSS powered by the JavaScript code I've written. The code is meant to be clean and polished with a responsive user interface that adapts to multiple screen sizes. The password can also include special characters. 
 
 To satisfy all of the required client criteria:
