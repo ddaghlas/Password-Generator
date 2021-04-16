@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <!-- Updated href to style.css -->
+    <!-- Updated href to assets/style.css -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -18,18 +18,20 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <!-- readonly removed from above id -->
           <textarea
+          readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <hr>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
+    <!-- added assets to script.js file -->
     <script src="assets/script.js"></script>
   </body>
 </html>
