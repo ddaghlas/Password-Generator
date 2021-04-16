@@ -1,43 +1,21 @@
-// 1.) Create an alert window
-    // a.) h1 = Password Generator
-        // i.) text is centered, bold and the largest text on the page
-        // ii.) slightly blue/white background
-    // b.) h2 = Generate a Password
-        // i.) create a child box
-        // ii.) this should lay on top of the Password Generator background
-        // iii.) white background
-        // iiii.) border-bottom added in a light gray with padding between the text and border
-    // c.) h3 = Your Secure Password
-        // i.) create a child box for the Generate password parent box 
-        // ii.) This should lay on top oif the Genrate a Password background
-        // iii.) white background
-        // iiii.) add a border-radius that is dashed and a medium gray
-        // v.) border-bottom added in a light gray with padding between the text and border
-    // d.) Generate Password button
-        // i.) red background and white text 
-        // ii.) border is rounded along the edges
+// 1. Prompt the user with a series of prompts
+    // create variables (length, lowercase, uppercase, numeric and/or special characters)
+// 2. 
 
-// 2.) Create prompts to generate a series of password criteria
-    // a.) user must be able to select which criteria they want to include in their password
-        // i.) the button "ok" provides a prompt for the user
-        // ii.) the "cancel" button skips that criteria and moves on to the next prompt
-    // b.) the user is then prompted with to choose the length of the password
-        // i.) create functions for the length
-        // ii.) password = is >= 8 but <=128 characters
-/
-/ 3.) create prompts for character types to include in the password    
-    // a.) choices (user does not have to choose all):
-        // i.) lowercase
-        // ii.) uppercase
-        // iii.) numeric
-        // iiii.) special characters
 
-// 4.) when the user answers each prompt
-    // a.) input should be validated
-    // b.) at least one character type should be selected
+// important classes in HTML
+    // .wrapper 
+    // <header> or <h1>Password Generator<h1>
+    // .card 
+    // .card-header or could remove class and target the <div> then the <h2>Generate a Password<h2>
+    // .card-body -- the text area where user will input text
+    // .card-footer -- encompasses the Generate Password button 
+    // .btn -- add events or actions -- when a user clicks
 
-// 5.) once all prompts are answered 
-    // a.) password is generated that matches the selected criteria
 
-// 6.) display the finsihed passwordas an alert window/box 
+// important ids in HTML
+    // #password -- targets the text? 
+    // overwrite placeholder to display " " 
+        // create an input and a form for this 
+    // <button #generate -- this will generate the final password 
 
