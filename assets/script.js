@@ -126,14 +126,14 @@ function generatePassword() {
   // This joins the password array and converts it to a string
   // Attempted to use .split(' ') for this method, however, it was not able to add the array AND convert it to a string
   var gp = password.join("");
-  employeeInput(gp);
+  userInput(gp);
   return gp;
   }
 
 // This calls for the randomly generated password to display within the text-area
 // Used text.Content for security purposes rather than innerHTML
 // Again, getElementById was used here as opposed to querySelector because of functionality
-function employeeInput(gp) {
+function userInput(gp) {
   document.getElementById("password").textContent = gp;
 }
 
