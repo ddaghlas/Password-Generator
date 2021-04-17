@@ -1,5 +1,5 @@
 // Assignment Code
-// userInput variables
+// employeeInput variables
 var enter;
 var confirmNumber;
 var confirmCharacter;
@@ -28,8 +28,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Moved addEventListener to call before the end of the functions
 // Eliminated the writePassword function, as it was not necessary
-// Added a function and varibale to call for the generatePassword function
-// This was a situation where querySelector and querySelectorAll did not produce desired results -- chose to use getElementById for proper functinality
+// Added a function and variable to call for the generatePassword function
+// This was a situation where querySelector and querySelectorAll did not produce desired results -- chose to use getElementById for proper functionality
 generateBtn.addEventListener("click", function () {
   var gp = generatePassword();
   document.getElementById("password").placeholder = gp;
@@ -43,7 +43,7 @@ function generatePassword() {
   // First if statement for the user to validate
   // If the criteria is not validated, the user receives the alert
   if (!enter) {
-    alert("This needs to include a value");
+    alert("Password must include a value");
   } else if (enter < 8 || enter > 128) {
     // validates the user input
     // Starts the user input prompts
@@ -51,22 +51,22 @@ function generatePassword() {
 
   } else {
     // the prompts for each of the criteria continue once user input is validated
-    confirmNumber = confirm("Would you like this to include numbers?");
-    confirmCharacter = confirm("Would you like this to include special characters?");
-    confirmUppercase = confirm("Would you like this to include Uppercase letters?");
-    confirmLowercase = confirm("Would you like this to include Lowercase letters?");
+    // Added confirm to the message string to display the prompts -- this allows the user to confirm or cancel
+    confirmNumber = confirm("Would you like the password to include numbers?");
+    confirmCharacter = confirm("Would you like the password to include special characters?");
+    confirmUppercase = confirm("Would you like the password to include uppercase letters?");
+    confirmLowercase = confirm("Would you like the password to include lowercase letters?");
   };
 
   // Else if for 4 negative choices
   // alerts the user that they MUST choose at least one of the 4 criteria
   if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
     choices = alert("You must choose at least one of the criteria!");
-
   }
   // This is the first if statement that uses the user input for the prompts
   // Else if for 4 positive choices
   else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
-      // The .concat method merges the arrays togerher
+      // The .concat method merges the arrays together
       choices = character.concat(number, abc, abc2);
   }
   // Else if for 3 positive choices
@@ -114,26 +114,26 @@ function generatePassword() {
       choices = space.concat(abc2);
   };
 
-  // password variable is an array placeholder for the user generated amount of length
+  // password variable is an array placeholder for the user's generated amount of length
   var password = [];
 
   // This for loop will start the random selection of variables
-  // Added Math.random function and multiplied it by the choices length to generate random variables that meet the length the user input
+  // Added Math.random function and multiplied it by the choices.length to generate random variables that meet the length the user input
   for (var i = 0; i < enter; i++) {
       var pickChoices = choices[Math.floor(Math.random() * choices.length)];
-      password.push(pickChoices);
+      password.push(pickChoices); // .push adds new elements to the end of the array
   }
   // This joins the password array and converts it to a string
   // Attempted to use .split(' ') for this method, however, it was not able to add the array AND convert it to a string
   var gp = password.join("");
-  userInput(gp);
+  employeeInput(gp);
   return gp;
   }
 
 // This calls for the randomly generated password to display within the text-area
 // Used text.Content for security purposes rather than innerHTML
 // Again, getElementById was used here as opposed to querySelector because of functionality
-function userInput(gp) {
+function employeeInput(gp) {
   document.getElementById("password").textContent = gp;
 }
 
