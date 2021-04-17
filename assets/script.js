@@ -7,7 +7,7 @@ var confirmUppercase;
 var confirmLowercase;
 // Password variable values
 // Special characters
-// Added \ to colon,semi-colon and back-slash to be able to input them into the array
+// Special character array semantics were modified so that the browser is able to recognize them as a character, not a declaration
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 // Numeric characters
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -15,9 +15,9 @@ number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // Space indicates conversion to Uppercase
 space = [];
-// Choices declared outside of the if statement so they can be concatenated upon conditional
+// Choices are declared outside of the if statement so they can be concatenated upon conditional
 var choices; 
-// Converts lower case letters to uppercase
+// Converts lowercase letters to uppercase
 var toUpper = function (x) {
   return x.toUpperCase();
 };
