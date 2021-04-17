@@ -39,15 +39,15 @@ generateBtn.addEventListener("click", function () {
 function generatePassword() {
   // Prompts the user to enter a numerical length to meet the password length criteria
   // parseInt allows the string to be converted into a number
-  enter = parseInt(prompt("Create a password at least 8 characters in length but no more than 128"));
+  enter = parseInt(prompt("Create a password by choosing a numerical length of at least 8 characters but no more than 128"));
   // First if statement for the user to validate
   // If the criteria is not validated, the user receives the alert
   if (!enter) {
-    alert("Password must include a value");
+    alert("The password must include a value!");
   } else if (enter < 8 || enter > 128) {
     // validates the user input
     // Starts the user input prompts
-    enter = parseInt(prompt("You must choose between 8 and 128"));
+    enter = parseInt(prompt("You must choose a numerical value between 8 and 128 characters in length"));
 
   } else {
     // the prompts for each of the criteria continue once user input is validated
@@ -61,7 +61,7 @@ function generatePassword() {
   // Else if for 4 negative choices
   // alerts the user that they MUST choose at least one of the 4 criteria
   if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-    choices = alert("You must choose at least one of the criteria!");
+    choices = alert("You must choose at least one of the recommended criteria to be included in your password!");
   }
   // This is the first if statement that uses the user input for the prompts
   // Else if for 4 positive choices
